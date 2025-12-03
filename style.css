@@ -3,26 +3,16 @@ body {
     color: #eeeeee !important;
     font-family: "Helvetica", "Arial", sans-serif !important;
 }
-
-/* Streamlit の背景も上書き */
 .stApp {
     background-color: #1a1a1a !important;
 }
-
-/* =======================================
-   Headings（見出し）
-======================================= */
 h1, h2, h3 {
-    color: #caa7ff !important;       /* 淡い紫：Aimerの世界観 */
+    color: #caa7ff !important;
     text-align: center !important;
     font-weight: 600 !important;
     margin-top: 1.3em !important;
     margin-bottom: 0.8em !important;
 }
-
-/* =======================================
-   カードデザイン（おすすめ曲用）
-======================================= */
 .card {
     background-color: #2a2a2a;
     border: 1px solid #444;
@@ -32,28 +22,18 @@ h1, h2, h3 {
     box-shadow: 3px 3px 12px rgba(0,0,0,0.5);
     transition: transform 0.15s ease-out;
 }
-
 .card:hover {
     transform: translateY(-3px);
 }
-
-/* =======================================
-   リンクのデザイン
-======================================= */
 a.custom-link {
     color: #ffbbff;
     font-weight: bold;
     text-decoration: none;
 }
-
 a.custom-link:hover {
     text-decoration: underline;
     color: #ffddff;
 }
-
-/* =======================================
-   Buttons（Streamlitのボタン）
-======================================= */
 .stButton > button {
     background-color: #6a4cff !important;
     border: none !important;
@@ -65,30 +45,20 @@ a.custom-link:hover {
     cursor: pointer !important;
     transition: background-color 0.2s ease;
 }
-
 .stButton > button:hover {
     background-color: #876dff !important;
 }
-
-/* =======================================
-   Page Link（t.page_link の文字）
-======================================= */
-.st-emotion-cache-ue6h4q a,           /* 旧バージョン */
-.st-emotion-cache-1kyxreq a,          /* 新バージョン */
+.st-emotion-cache-ue6h4q a,
+.st-emotion-cache-1kyxreq a,
 .stPageLink a {
     color: #caa7ff !important;
     font-weight: bold !important;
     font-size: 1.05rem !important;
 }
-
 .stPageLink a:hover {
     color: #e5ccff !important;
     text-decoration: underline !important;
 }
-
-/* =======================================
-   Responsive（スマホのとき）
-======================================= */
 @media (max-width: 768px) {
     .card {
         padding: 12px;
@@ -97,4 +67,7 @@ a.custom-link:hover {
     h1 {
         font-size: 1.7rem !important;
     }
+}
+html, body, p, span, div {
+    color: #ffffff !important;
 }
