@@ -213,7 +213,7 @@ user = {
 }
 scores = {}
 for title, tags in songs.items():
-    scores = 0
+    score = 0
     if user["雰囲気"] == tags["雰囲気"]:
         score += 1
     genres = set(user["ジャンル"]) & set(tags["ジャンル"])
@@ -230,10 +230,10 @@ best_info = songs[best_title]
 st.header("🎉 あなたへのベストマッチ")
 st.subheader(best_title)
 st.write(best_info["紹介"])
-st.write(f"[YouTubeリンクはこちら]({best_info["リンク"]})")
+st.write(f"[YouTubeリンクはこちら]({best_info['リンク']})")
 st.subheader("💡 その他のおすすめ")
 for title, score in others:
     info = songs[title]
     st.markdown(f"### {title}")
     st.write(info["紹介"])
-    st.write(f"[▶Youtubeで聴いてみる]({info["リンク"]})")
+    st.write(f"[▶Youtubeで聴いてみる]({info['リンク']})")
