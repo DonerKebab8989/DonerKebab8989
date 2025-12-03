@@ -237,3 +237,4 @@ for title, score in others:
     st.markdown(f"### {title}")
     st.write(info["紹介"])
     st.write(f"[▶Youtubeで聴いてみる]({info['リンク']})")
+st.page_link("survey.py", label="→もう一度診断してみる")

@@ -17,3 +17,4 @@ selection3 = st.segmented_control(
     "🎤どんなテンポが好き？", q3, selection_mode="single"
 )
 st.session_state["answer3"] = selection3
+st.page_link("result.py", label="→診断結果はこちら")
