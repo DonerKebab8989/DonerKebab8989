@@ -1,5 +1,11 @@
 import streamlit as st
 
+def set_style():
+    with open("style.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+set_style()
+
 st.title("診断テスト")
 st.subheader("以下の質問に直感でお答えください。")
 q1 = ["明るい曲", "暗い曲", "どちらともいえない"]

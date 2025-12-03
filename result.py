@@ -1,5 +1,11 @@
 import streamlit as st
 
+def set_style():
+    with open("style.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+set_style()
+
 st.title("診断結果")
 songs = {
     "六等星の夜": {
@@ -228,13 +234,25 @@ best_title = best[0]
 best_score = best[1]
 best_info = songs[best_title]
 st.header("🎉 あなたへのベストマッチ")
-st.subheader(best_title)
-st.write(best_info["紹介"])
-st.write(f"[YouTubeリンクはこちら]({best_info['リンク']})")
+st.markdown(f"""
+<div class="card">
+    <h2>{best_title}</h2>
+    <p>{best_info['紹介']}</p>
+    <a href="{best_info['リンク']}" class="custom-link" target="_blank">
+        ▶ YouTubeで聴く
+    </a>
+</div>
+""", unsafe_allow_html=True)
 st.subheader("💡 その他のおすすめ")
 for title, score in others:
     info = songs[title]
-    st.markdown(f"### {title}")
-    st.write(info["紹介"])
-    st.write(f"[▶Youtubeで聴いてみる]({info['リンク']})")
+    st.markdown(f"""
+<div class="card">
+    <h3>{title}</h3>
+    <p>{info['紹介']}</p>
+    <a href="{info['リンク']}" class="custom-link" target="_blank">
+        ▶ YouTubeで聴く
+    </a>
+</div>
+""", unsafe_allow_html=True)
 st.page_link("survey.py", label="→もう一度診断してみる")
