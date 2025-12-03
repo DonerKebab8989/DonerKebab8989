@@ -68,6 +68,6 @@ a.custom-link:hover {
         font-size: 1.7rem !important;
     }
 }
-body, p, span, div {
+p {
     color: #ffffff !important;
 }
