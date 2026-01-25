@@ -6,11 +6,11 @@ def set_style():
 
 set_style()
 
-st.title("診断テスト")
-st.subheader("以下の質問に直感でお答えください。")
-q1 = ["明るい曲", "暗い曲", "どちらともいえない"]
+st.title("Quiz")
+st.subheader("Please answer the following questions based on your first impression.")
+q1 = ["Bright songs", "Dark songs", "Not sure / Either is fine"]
 selection1 = st.segmented_control(
-    "🎤歌詞の意味は関係なく、聞いた感じの雰囲気はどっちが好き？", q1, selection_mode="single", key="q1"
+    "🎤Regardless of the lyrics, which kind of vibe do you prefer when you listen?", q1, selection_mode="single", key="q1"
 )
 st.markdown("""
 <style>
@@ -21,9 +21,9 @@ div[data-testid="stSegmentedControl"][aria-label="q1"] button {
 """, unsafe_allow_html=True
 )
 st.session_state["answer1"] = selection1
-q2 = ["恋愛", "友情", "学校", "青春", "応援", "家族", "季節・イベント・自然", "別れ", "アニメ", "ドラマ・映画"]
+q2 = ["Romance", "Friendship", "School", "Youth", "Cheering / Motivation", "Family", "Seasons / Events / Nature", "Goodbye / Farewell", "Anime", "Drama / Movies"]
 selection2 = st.segmented_control(
-    "🎤好きな音楽のジャンルは？複数選択できます♪", q2, selection_mode="multi", key="q2"
+    "🎤 What kind of music themes do you like? (You can choose more than one♪)", q2, selection_mode="multi", key="q2"
 )
 st.markdown("""
 <style>
@@ -34,9 +34,9 @@ div[data-testid="stSegmentedControl"][aria-label="q2"] button {
 """, unsafe_allow_html=True
 )
 st.session_state["answer2"] = selection2
-q3 = ["アップテンポ", "ゆっくり", "リズミカル", "あてはまるものはない"]
+q3 = ["Upbeat", "Slow", "Rhythmic", "None of these"]
 selection3 = st.segmented_control(
-    "🎤どんなテンポが好き？", q3, selection_mode="single", key="q3"
+    "🎤What tempo do you like?", q3, selection_mode="single", key="q3"
 )
 st.markdown("""
 <style>
@@ -47,4 +47,4 @@ div[data-testid="stSegmentedControl"][aria-label="q3"] button {
 """, unsafe_allow_html=True
 )
 st.session_state["answer3"] = selection3
-st.page_link("result.py", label="→診断結果はこちら")
+st.page_link("result.py", label="→ See your results here")
